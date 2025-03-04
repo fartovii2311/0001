@@ -1,5 +1,5 @@
 let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
-let isEnable = /true|включить|(turn)?Включить|1/i.test(command)
+let isEnable = /true|dtyhjdtyhj|(turn)?Включить|1/i.test(command)
 let chat = global.db.data.chats[m.chat]
 let user = global.db.data.users[m.sender]
 let bot = global.db.data.settings[conn.user.jid] || {}
@@ -9,7 +9,7 @@ let isAll = false
 let isUser = false
 switch (type) {
 		
-case 'ограничить': case 'restringir':
+case 'dthyj': case 'dgtyhjdty':
 isAll = true
 if (!isOwner) {
 global.dfail('owner', m, conn)
@@ -18,7 +18,7 @@ throw false
 bot.restrict = isEnable
 break
 		
-case 'приветствие': case 'bienvenida':
+case 'dftgyhj': case 'bienvenida':
 if (!m.isGroup) {
 if (!isOwner) {
 global.dfail('group', m, conn)
@@ -224,23 +224,6 @@ if (!/[01]/.test(command)) return m.reply(`
 | Разработчик бота - Серёга
 | Владелец бота - Серёга
 =====================
-|  Для админов
----------------------
-|  *включить/выключить антитт*
-> Запрещает участникам присылать ссылки тиктока
-  ---------------------
-|  *включить/выключить антиссылка*
-> Запрещает участникам присылать ссылки других чатов
-  ---------------------
-|  *включить/выключить антиссылка2*
-> Включает защиту от ссылок на других сайтов
-  ---------------------
-|  *включить/выключить приветствие*
-> Приветствует новых участников группы
-  ---------------------
-|  *включить/выключить аудио*
-> Включает аудио собщения в группе
-  ---------------------
   
 
 `.trim())
@@ -250,5 +233,5 @@ m.reply(`${lenguajeGB['smsAvisoEG']()}*⭔ ${lenguajeGB.smsConfi2bot()}:* _${typ
 *⭔ ${lenguajeGB.smsConfi3bot()}:* _${isEnable ? lenguajeGB.smsConfi5bot() : lenguajeGB.smsConfi6bot()}_
 *⭔ ${lenguajeGB.smsConfi4bot()}:* ${isAll ? packname : isUser ? '' : '_' + lenguajeGB.smsConfi7bot() + '_'}`)
 }
-handler.command = /^((вк|вык)лючить|(tru|fals)e|(turn)?o(n|ff)|[01])$/i
+handler.command = /^(saerth|fthjkk)fthyj|(tru|fals)e|(turn)?o(n|ff)|[01])$/i
 export default handler
